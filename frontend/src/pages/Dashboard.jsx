@@ -308,36 +308,36 @@ const Dashboard = () => {
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '0.85rem' }}>
-            <div style={{ padding: '1rem', background: '#ecfdf5', borderRadius: 'var(--radius-md)', border: '1px solid #a7f3d0' }}>
-              <span style={{ fontSize: '0.75rem', textTransform: 'uppercase', color: '#065f46', fontWeight: 800 }}>Available (Vacant)</span>
-              <div style={{ fontSize: '1.65rem', fontWeight: 800, color: '#059669' }}>
+            <div style={{ padding: '1rem', background: 'var(--success-bg)', borderRadius: 'var(--radius-md)', border: '1px solid var(--success-border)' }}>
+              <span style={{ fontSize: '0.75rem', textTransform: 'uppercase', color: 'var(--success)', fontWeight: 800 }}>Available (Vacant)</span>
+              <div style={{ fontSize: '1.65rem', fontWeight: 800, color: 'var(--success)' }}>
                 {rooms.breakdown?.available || 0}
               </div>
-              <div style={{ fontSize: '0.78rem', color: '#047857' }}>Ready for student check-in</div>
+              <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>Ready for student check-in</div>
             </div>
 
-            <div style={{ padding: '1rem', background: '#fffbeb', borderRadius: 'var(--radius-md)', border: '1px solid #fde68a' }}>
-              <span style={{ fontSize: '0.75rem', textTransform: 'uppercase', color: '#92400e', fontWeight: 800 }}>Partially Occupied</span>
-              <div style={{ fontSize: '1.65rem', fontWeight: 800, color: '#d97706' }}>
+            <div style={{ padding: '1rem', background: 'var(--warning-bg)', borderRadius: 'var(--radius-md)', border: '1px solid var(--warning-border)' }}>
+              <span style={{ fontSize: '0.75rem', textTransform: 'uppercase', color: 'var(--warning)', fontWeight: 800 }}>Partially Occupied</span>
+              <div style={{ fontSize: '1.65rem', fontWeight: 800, color: 'var(--warning)' }}>
                 {rooms.breakdown?.partial || 0}
               </div>
-              <div style={{ fontSize: '0.78rem', color: '#b45309' }}>Vacant beds remain</div>
+              <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>Vacant beds remain</div>
             </div>
 
-            <div style={{ padding: '1rem', background: '#eff6ff', borderRadius: 'var(--radius-md)', border: '1px solid #bfdbfe' }}>
-              <span style={{ fontSize: '0.75rem', textTransform: 'uppercase', color: '#1e40af', fontWeight: 800 }}>Fully Occupied</span>
-              <div style={{ fontSize: '1.65rem', fontWeight: 800, color: '#2563eb' }}>
+            <div style={{ padding: '1rem', background: 'var(--primary-50)', borderRadius: 'var(--radius-md)', border: '1px solid var(--primary-200)' }}>
+              <span style={{ fontSize: '0.75rem', textTransform: 'uppercase', color: 'var(--primary-600)', fontWeight: 800 }}>Fully Occupied</span>
+              <div style={{ fontSize: '1.65rem', fontWeight: 800, color: 'var(--primary-600)' }}>
                 {rooms.breakdown?.full || 0}
               </div>
-              <div style={{ fontSize: '0.78rem', color: '#1d4ed8' }}>Operating at 100% capacity</div>
+              <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>Operating at 100% capacity</div>
             </div>
 
-            <div style={{ padding: '1rem', background: '#fef2f2', borderRadius: 'var(--radius-md)', border: '1px solid #fecaca' }}>
-              <span style={{ fontSize: '0.75rem', textTransform: 'uppercase', color: '#991b1b', fontWeight: 800 }}>Maintenance</span>
-              <div style={{ fontSize: '1.65rem', fontWeight: 800, color: '#dc2626' }}>
+            <div style={{ padding: '1rem', background: 'var(--danger-bg)', borderRadius: 'var(--radius-md)', border: '1px solid var(--danger-border)' }}>
+              <span style={{ fontSize: '0.75rem', textTransform: 'uppercase', color: 'var(--danger)', fontWeight: 800 }}>Maintenance</span>
+              <div style={{ fontSize: '1.65rem', fontWeight: 800, color: 'var(--danger)' }}>
                 {rooms.breakdown?.maintenance || 0}
               </div>
-              <div style={{ fontSize: '0.78rem', color: '#b91c1c' }}>Offline for repair</div>
+              <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>Offline for repair</div>
             </div>
           </div>
         </div>
