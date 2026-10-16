@@ -16,6 +16,7 @@ import {
   Sparkles,
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
+import ThemeToggle from '../common/ThemeToggle';
 
 const Sidebar = ({ isMobileOpen, onCloseMobile }) => {
   const { user, role, logout } = useAuth();
@@ -118,6 +119,44 @@ const Sidebar = ({ isMobileOpen, onCloseMobile }) => {
         </nav>
 
         <div className="sidebar-footer">
+          {/* Interface Mode Dual Switcher */}
+          <div style={{ marginBottom: '0.85rem' }}>
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                marginBottom: '0.35rem',
+                padding: '0 0.15rem',
+              }}
+            >
+              <span
+                style={{
+                  fontSize: '0.72rem',
+                  fontWeight: 800,
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.05em',
+                  color: 'var(--text-muted)',
+                }}
+              >
+                Theme Mode
+              </span>
+              <span
+                style={{
+                  fontSize: '0.68rem',
+                  fontWeight: 700,
+                  color: 'var(--primary-600)',
+                  background: 'var(--primary-50)',
+                  padding: '0.1rem 0.4rem',
+                  borderRadius: 'var(--radius-sm)',
+                }}
+              >
+                Alt+T
+              </span>
+            </div>
+            <ThemeToggle variant="segmented" />
+          </div>
+
           <div className="user-mini-card">
             {user?.avatar ? (
               <img src={user.avatar} alt="" className="user-avatar" />
