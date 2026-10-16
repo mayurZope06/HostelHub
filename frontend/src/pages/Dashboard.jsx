@@ -209,8 +209,8 @@ const Dashboard = () => {
             style={{
               padding: '1.25rem',
               borderRadius: 'var(--radius-lg)',
-              background: '#f8fafc',
-              border: '1px solid #e2e8f0',
+              background: 'var(--bg-secondary)',
+              border: '1px solid var(--border-color)',
               borderLeft: '4px solid #2563eb',
             }}
           >
@@ -238,8 +238,8 @@ const Dashboard = () => {
             style={{
               padding: '1.25rem',
               borderRadius: 'var(--radius-lg)',
-              background: '#f8fafc',
-              border: '1px solid #e2e8f0',
+              background: 'var(--bg-secondary)',
+              border: '1px solid var(--border-color)',
               borderLeft: '4px solid #059669',
             }}
           >
@@ -267,8 +267,8 @@ const Dashboard = () => {
             style={{
               padding: '1.25rem',
               borderRadius: 'var(--radius-lg)',
-              background: '#f8fafc',
-              border: '1px solid #e2e8f0',
+              background: 'var(--bg-secondary)',
+              border: '1px solid var(--border-color)',
               borderLeft: '4px solid #d97706',
             }}
           >
@@ -355,7 +355,7 @@ const Dashboard = () => {
           </div>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0.75rem 1rem', background: '#f8fafc', borderRadius: 'var(--radius-md)', border: '1px solid #e2e8f0' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0.75rem 1rem', background: 'var(--bg-secondary)', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)' }}>
               <div>
                 <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 700 }}>Total Collected</span>
                 <div style={{ fontSize: '1.35rem', fontWeight: 800, color: '#059669' }}>
@@ -503,8 +503,8 @@ const Dashboard = () => {
                 style={{
                   padding: '1rem',
                   borderRadius: 'var(--radius-md)',
-                  background: n.isPinned ? '#eff6ff' : '#f8fafc',
-                  border: n.isPinned ? '1px solid #bfdbfe' : '1px solid #e2e8f0',
+                  background: n.isPinned ? 'var(--primary-50)' : 'var(--bg-secondary)',
+                  border: n.isPinned ? '1px solid var(--primary-200)' : '1px solid var(--border-color)',
                   boxShadow: 'var(--shadow-xs)',
                 }}
               >
