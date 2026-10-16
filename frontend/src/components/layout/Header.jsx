@@ -3,6 +3,7 @@ import { Menu, Bell, ShieldCheck, User, Sparkles, Building2, Search, ArrowRight,
 import { useAuth } from '../../context/AuthContext';
 import { useTheme } from '../../context/ThemeContext';
 import { useNavigate } from 'react-router-dom';
+import ThemeToggle from '../common/ThemeToggle';
 
 const Header = ({ onToggleMobile, pageTitle }) => {
   const { user, isAdmin } = useAuth();
@@ -76,23 +77,8 @@ const Header = ({ onToggleMobile, pageTitle }) => {
           Hostel Hub Active
         </div>
 
-        {/* Theme Switcher Toggle */}
-        <button
-          onClick={toggleTheme}
-          className="btn-icon"
-          title={theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-          id="theme-toggle-btn"
-          style={{
-            position: 'relative',
-            overflow: 'hidden',
-          }}
-        >
-          {theme === 'dark' ? (
-            <Sun size={18} color="#f59e0b" style={{ animation: 'fadeIn 0.2s ease-out' }} />
-          ) : (
-            <Moon size={18} color="#4f46e5" style={{ animation: 'fadeIn 0.2s ease-out' }} />
-          )}
-        </button>
+        {/* Theme Switcher Toggle Pill */}
+        <ThemeToggle variant="header" />
 
         {/* Notice Board Link */}
         <button
