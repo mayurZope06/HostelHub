@@ -53,21 +53,7 @@ const Login = () => {
       }}
     >
       {/* Floating Theme Switcher on Login Page */}
-      <button
-        onClick={toggleTheme}
-        className="btn-icon"
-        title={theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-        style={{
-          position: 'absolute',
-          top: '1.5rem',
-          right: '1.5rem',
-          width: '42px',
-          height: '42px',
-          borderRadius: 'var(--radius-full)',
-        }}
-      >
-        {theme === 'dark' ? <Sun size={20} color="#f59e0b" /> : <Moon size={20} color="#4f46e5" />}
-      </button>
+      <ThemeToggle variant="floating" />
 
       <div
         className="card"
