@@ -4,7 +4,8 @@ const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(() => {
-    return localStorage.getItem('hostel_theme') || 'dark'; // default to stylish dark mode
+    const saved = localStorage.getItem('hostel_theme');
+    return saved === 'dark' ? 'light' : 'light'; // Always default to modern light theme
   });
 
   useEffect(() => {

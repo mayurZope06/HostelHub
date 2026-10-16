@@ -12,18 +12,6 @@
       "updatedAt": "2026-10-16T10:09:43.658Z"
     },
     {
-      "_id": "6ad1f7e790994b927ed1b8da",
-      "name": "Rahul Sharma",
-      "email": "rahul@student.com",
-      "password": "$2b$10$hH1yU3hWSvX0qAb8X8c/HukX3qB0AxOhV/sg1SvK57fVYRXRKKdKK",
-      "role": "student",
-      "phone": "+91 98111 22334",
-      "studentId": "6ad1f7e7964b224f3a7dbbe8",
-      "avatar": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=250&q=80",
-      "createdAt": "2026-10-16T10:09:43.784Z",
-      "updatedAt": "2026-10-16T10:09:43.784Z"
-    },
-    {
       "_id": "6ad1f7e75465165ccc73da46",
       "name": "Priya Patel",
       "email": "priya@student.com",
@@ -61,45 +49,6 @@
     }
   ],
   "students": [
-    {
-      "_id": "6ad1f7e7964b224f3a7dbbe8",
-      "registrationNumber": "HST-2025-001",
-      "firstName": "Rahul",
-      "lastName": "Sharma",
-      "email": "rahul@student.com",
-      "phone": "+91 98111 22334",
-      "gender": "Male",
-      "dateOfBirth": {},
-      "bloodGroup": "B+",
-      "course": "B.Tech Computer Science",
-      "department": "Computer Science & Engineering",
-      "yearOfStudy": 3,
-      "address": {
-        "street": "42 Blossom Heights",
-        "city": "Jaipur",
-        "state": "Rajasthan",
-        "postalCode": "302001"
-      },
-      "emergencyContact": {
-        "name": "Manoj Sharma",
-        "relation": "Father",
-        "phone": "+91 98111 99887"
-      },
-      "guardian": {
-        "name": "Manoj Sharma",
-        "relation": "Father",
-        "phone": "+91 98111 99887",
-        "email": "manoj.sharma@example.com"
-      },
-      "avatar": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=250&q=80",
-      "createdAt": "2026-10-16T10:09:43.783Z",
-      "updatedAt": "2026-10-16T10:09:44.183Z",
-      "fullName": "Rahul Sharma",
-      "userAccount": "6ad1f7e790994b927ed1b8da",
-      "currentRoom": "6ad1f7e7ae3283136f97013b",
-      "allocationDate": "2025-08-01T00:00:00.000Z",
-      "status": "Active"
-    },
     {
       "_id": "6ad1f7e7aa668ae760891f09",
       "registrationNumber": "HST-2025-002",
@@ -323,7 +272,11 @@
       },
       "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=250&q=80",
       "createdAt": "2026-10-16T10:09:43.783Z",
-      "updatedAt": "2026-10-16T10:09:43.783Z"
+      "updatedAt": "2026-10-16T11:05:45.835Z",
+      "fullName": "Karthik Nair",
+      "currentRoom": "6ad1f7e7ae3283136f97013b",
+      "allocationDate": "2026-10-16",
+      "status": "Active"
     },
     {
       "_id": "6ad1f7e75e1e301fec3e69ee",
@@ -379,8 +332,9 @@
       ],
       "description": "Deluxe single occupancy room with private balcony and air conditioning.",
       "createdAt": "2026-10-16T10:09:43.650Z",
-      "updatedAt": "2026-10-16T10:09:44.188Z",
-      "status": "Occupied"
+      "updatedAt": "2026-10-16T11:05:45.834Z",
+      "status": "Occupied",
+      "availableBeds": 1
     },
     {
       "_id": "6ad1f7e73382f006af915983",
@@ -601,10 +555,11 @@
       "startDate": {},
       "monthlyFee": 38000,
       "allocatedBy": "6ad1f7e7cc5336959962125c",
-      "status": "Active",
-      "remarks": "Allocated during first semester enrollment",
+      "status": "Vacated",
+      "remarks": "Student profile deleted",
       "createdAt": "2026-10-16T10:09:44.182Z",
-      "updatedAt": "2026-10-16T10:09:44.182Z"
+      "updatedAt": "2026-10-16T11:04:58.064Z",
+      "endDate": "2026-10-16T11:04:58.064Z"
     },
     {
       "_id": "6ad1f7e8f969e58dcde68cce",
@@ -675,6 +630,20 @@
       "remarks": "Courtyard view room",
       "createdAt": "2026-10-16T10:09:44.182Z",
       "updatedAt": "2026-10-16T10:09:44.182Z"
+    },
+    {
+      "_id": "6ad2050901c42b047164ce58",
+      "student": "6ad1f7e7afb624cc88b2741b",
+      "room": "6ad1f7e7ae3283136f97013b",
+      "bedNumber": 1,
+      "academicYear": "2025-2026",
+      "startDate": "2026-10-16",
+      "remarks": "Regular academic semester allotment",
+      "monthlyFee": 38000,
+      "allocatedBy": "6ad1f7e7cc5336959962125c",
+      "status": "Active",
+      "createdAt": "2026-10-16T11:05:45.833Z",
+      "updatedAt": "2026-10-16T11:05:45.833Z"
     }
   ],
   "fees": [
@@ -797,6 +766,20 @@
       "remarks": "Refundable caution deposit deposited with hostel bursar",
       "createdAt": "2026-10-16T10:09:44.192Z",
       "updatedAt": "2026-10-16T10:09:44.192Z"
+    },
+    {
+      "_id": "6ad20509cf07bed9b2bc67dd",
+      "invoiceNumber": "INV-745836",
+      "student": "6ad1f7e7afb624cc88b2741b",
+      "room": "6ad1f7e7ae3283136f97013b",
+      "title": "Room A-101 Hostel Fee (2025-2026)",
+      "feeType": "Hostel Rent",
+      "amount": 38000,
+      "paidAmount": 0,
+      "dueDate": {},
+      "status": "Pending",
+      "createdAt": "2026-10-16T11:05:45.851Z",
+      "updatedAt": "2026-10-16T11:05:45.851Z"
     }
   ],
   "complaints": [

@@ -20,12 +20,14 @@ import {
   Wifi,
   Sparkles,
   Layers,
+  Check,
+  CheckCircle2,
 } from 'lucide-react';
 
 const Rooms = () => {
   const [rooms, setRooms] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [viewMode, setViewMode] = useState('grid'); // 'grid' | 'table'
+  const [viewMode, setViewMode] = useState('grid');
 
   // Filters
   const [search, setSearch] = useState('');
@@ -86,33 +88,35 @@ const Rooms = () => {
     }
   };
 
+  const blocks = ['All', 'Block A', 'Block B', 'Block C', 'Block D'];
+
   return (
     <div>
       {/* Header bar */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem', marginBottom: '1.5rem' }}>
         <div>
-          <h1 style={{ fontSize: '1.75rem', fontWeight: 800 }}>Room Management</h1>
+          <h1 style={{ fontSize: '1.75rem', fontWeight: 800 }}>Hostel Rooms & Inventory</h1>
           <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
-            Hostel blocks, room inventory, amenities, and live bed occupancy tracking
+            Interactive bed layout, live room status, floor wing inventory, and amenities
           </p>
         </div>
 
         <div style={{ display: 'flex', gap: '0.65rem', alignItems: 'center' }}>
           {/* View Toggle */}
-          <div style={{ display: 'flex', background: 'var(--bg-secondary)', borderRadius: 'var(--radius-md)', padding: '0.2rem' }}>
+          <div style={{ display: 'flex', background: '#f1f5f9', borderRadius: 'var(--radius-md)', padding: '0.2rem' }}>
             <button
               onClick={() => setViewMode('grid')}
               className={`btn-icon btn-sm ${viewMode === 'grid' ? 'btn-primary' : 'btn-ghost'}`}
-              style={{ width: '32px', height: '32px' }}
-              title="Grid View"
+              style={{ width: '34px', height: '34px' }}
+              title="Interactive Card View"
             >
               <LayoutGrid size={16} />
             </button>
             <button
               onClick={() => setViewMode('table')}
               className={`btn-icon btn-sm ${viewMode === 'table' ? 'btn-primary' : 'btn-ghost'}`}
-              style={{ width: '32px', height: '32px' }}
-              title="Table View"
+              style={{ width: '34px', height: '34px' }}
+              title="Data Table View"
             >
               <List size={16} />
             </button>
@@ -133,8 +137,22 @@ const Rooms = () => {
         </div>
       </div>
 
+      {/* Block Filter Chips */}
+      <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '1.25rem' }}>
+        {blocks.map((b) => (
+          <button
+            key={b}
+            onClick={() => setBlockFilter(b)}
+            className={`btn btn-sm ${blockFilter === b ? 'btn-primary' : 'btn-secondary'}`}
+            style={{ borderRadius: 'var(--radius-full)', padding: '0.4rem 1.1rem' }}
+          >
+            {b === 'All' ? 'All Blocks' : b}
+          </button>
+        ))}
+      </div>
+
       {/* Filter and Search Bar */}
-      <div className="table-card" style={{ marginBottom: '1.5rem' }}>
+      <div className="table-card" style={{ marginBottom: '1.75rem' }}>
         <div className="table-toolbar">
           <form onSubmit={handleSearchSubmit} className="search-box">
             <Search size={16} className="search-icon" />
@@ -142,31 +160,13 @@ const Rooms = () => {
               type="text"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              placeholder="Search by room number (e.g. A-101)..."
+              placeholder="Search by room # (e.g. A-101)..."
             />
           </form>
 
           <div style={{ display: 'flex', gap: '0.85rem', flexWrap: 'wrap', alignItems: 'center' }}>
-            {/* Block Filter */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-              <span style={{ fontSize: '0.82rem', color: 'var(--text-muted)' }}>Block:</span>
-              <select
-                value={blockFilter}
-                onChange={(e) => setBlockFilter(e.target.value)}
-                className="form-select"
-                style={{ width: 'auto', padding: '0.45rem 0.8rem', fontSize: '0.85rem' }}
-              >
-                <option value="All">All Blocks</option>
-                <option value="Block A">Block A</option>
-                <option value="Block B">Block B</option>
-                <option value="Block C">Block C</option>
-                <option value="Block D">Block D</option>
-              </select>
-            </div>
-
-            {/* Type Filter */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-              <span style={{ fontSize: '0.82rem', color: 'var(--text-muted)' }}>Type:</span>
+              <span style={{ fontSize: '0.82rem', color: 'var(--text-muted)', fontWeight: 600 }}>Type:</span>
               <select
                 value={typeFilter}
                 onChange={(e) => setTypeFilter(e.target.value)}
@@ -181,9 +181,8 @@ const Rooms = () => {
               </select>
             </div>
 
-            {/* Status Filter */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-              <span style={{ fontSize: '0.82rem', color: 'var(--text-muted)' }}>Status:</span>
+              <span style={{ fontSize: '0.82rem', color: 'var(--text-muted)', fontWeight: 600 }}>Status:</span>
               <select
                 value={statusFilter}
                 onChange={(e) => setStatusFilter(e.target.value)}
@@ -193,7 +192,7 @@ const Rooms = () => {
                 <option value="All">All Statuses</option>
                 <option value="Available">Available</option>
                 <option value="Partially Occupied">Partial</option>
-                <option value="Occupied">Full</option>
+                <option value="Occupied">Occupied</option>
                 <option value="Maintenance">Maintenance</option>
               </select>
             </div>
@@ -202,14 +201,14 @@ const Rooms = () => {
 
         {/* Room Views */}
         {isLoading ? (
-          <div style={{ padding: '3rem', textAlign: 'center', color: 'var(--text-muted)' }}>
+          <div style={{ padding: '3.5rem', textAlign: 'center', color: 'var(--text-muted)' }}>
             Loading rooms inventory...
           </div>
         ) : rooms.length === 0 ? (
           <EmptyState
             icon={BedDouble}
-            title="No rooms found"
-            description="No hostel rooms match your search criteria."
+            title="No rooms match filter"
+            description="Try selecting a different block or resetting filters."
             actionLabel={isAdmin ? 'Add New Room' : null}
             onAction={() => {
               setRoomToEdit(null);
@@ -217,23 +216,25 @@ const Rooms = () => {
             }}
           />
         ) : viewMode === 'grid' ? (
-          /* Grid Card View */
+          /* Modern Interactive Card View with Physical Bed Slots */
           <div
             style={{
               padding: '1.5rem',
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
-              gap: '1.25rem',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(330px, 1fr))',
+              gap: '1.35rem',
             }}
           >
             {rooms.map((rm) => {
               const freeBeds = Math.max(0, rm.capacity - (rm.occupiedBeds || 0));
+              const occupants = rm.occupants || [];
+
               return (
                 <div
                   key={rm._id}
                   className="card"
                   style={{
-                    padding: '1.25rem',
+                    padding: '1.4rem',
                     border: '1px solid var(--border-color)',
                     display: 'flex',
                     flexDirection: 'column',
@@ -241,115 +242,98 @@ const Rooms = () => {
                   }}
                 >
                   <div>
-                    {/* Top Row: Room number, type badge, status */}
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.75rem' }}>
+                    {/* Top Header: Room number, price chip, status */}
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.85rem' }}>
                       <div>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                          <span style={{ fontSize: '1.35rem', fontWeight: 800, color: 'var(--text-primary)' }}>
+                          <span style={{ fontSize: '1.4rem', fontWeight: 800, color: 'var(--text-primary)' }}>
                             Room {rm.roomNumber}
                           </span>
                           <Badge status={rm.status} />
                         </div>
                         <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '0.2rem' }}>
-                          {rm.block} • Floor {rm.floor} • {rm.roomType}
+                          {rm.block} • Floor {rm.floor} • <strong>{rm.roomType}</strong>
                         </div>
                       </div>
 
                       <div style={{ textAlign: 'right' }}>
-                        <span style={{ fontSize: '1.1rem', fontWeight: 800, color: 'var(--primary-600)' }}>
+                        <span style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--primary-600)' }}>
                           ₹{Number(rm.feePerSemester).toLocaleString()}
                         </span>
                         <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>/ semester</div>
                       </div>
                     </div>
 
-                    {/* Bed Capacity Progress */}
-                    <div style={{ marginBottom: '1rem' }}>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.82rem', marginBottom: '0.35rem' }}>
-                        <span style={{ color: 'var(--text-secondary)' }}>Bed Allocation:</span>
-                        <span style={{ fontWeight: 700, color: freeBeds > 0 ? 'var(--success)' : 'var(--danger)' }}>
-                          {rm.occupiedBeds} / {rm.capacity} Beds Occupied ({freeBeds} Free)
+                    {/* Physical Bed Slots Visualizer */}
+                    <div style={{ marginBottom: '1.2rem' }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', fontWeight: 700, color: 'var(--text-secondary)', marginBottom: '0.45rem' }}>
+                        <span>Beds ({rm.capacity} Total)</span>
+                        <span style={{ color: freeBeds > 0 ? 'var(--success)' : 'var(--danger)' }}>
+                          {freeBeds} Free Bed{freeBeds === 1 ? '' : 's'}
                         </span>
                       </div>
-                      <div className="progress-bar-container">
-                        <div
-                          className="progress-bar-fill"
-                          style={{
-                            width: `${(rm.occupiedBeds / rm.capacity) * 100}%`,
-                            background: rm.status === 'Maintenance' ? 'var(--danger)' : rm.occupiedBeds === rm.capacity ? 'var(--danger)' : 'var(--primary-gradient)',
-                          }}
-                        />
+
+                      {/* Render Each Individual Bed Slot */}
+                      <div className="bed-slots-grid">
+                        {Array.from({ length: rm.capacity }).map((_, idx) => {
+                          const occupant = occupants[idx];
+                          if (occupant) {
+                            return (
+                              <div key={idx} className="bed-slot occupied" title={`Bed ${idx + 1}: ${occupant.student?.firstName} ${occupant.student?.lastName}`}>
+                                <span style={{ width: '18px', height: '18px', borderRadius: '50%', background: 'var(--success)', color: 'white', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.68rem', fontWeight: 800 }}>
+                                  {idx + 1}
+                                </span>
+                                <span>{occupant.student?.firstName || 'Resident'}</span>
+                              </div>
+                            );
+                          } else {
+                            return (
+                              <button
+                                key={idx}
+                                onClick={() => {
+                                  if (isAdmin && rm.status !== 'Maintenance') {
+                                    setAllocatingRoomId(rm._id);
+                                    setIsAllocationModalOpen(true);
+                                  }
+                                }}
+                                className="bed-slot vacant"
+                                title={isAdmin ? `Click to assign student to Bed ${idx + 1}` : 'Vacant Bed'}
+                                style={{ cursor: isAdmin && rm.status !== 'Maintenance' ? 'pointer' : 'default' }}
+                              >
+                                <span>Bed {idx + 1}</span>
+                                <span style={{ color: 'var(--primary-600)', fontWeight: 800 }}>+ Free</span>
+                              </button>
+                            );
+                          }
+                        })}
                       </div>
                     </div>
 
-                    {/* Occupants Preview */}
-                    <div style={{ marginBottom: '1rem' }}>
-                      <div style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', color: 'var(--text-muted)', marginBottom: '0.4rem' }}>
-                        Current Occupants
-                      </div>
-                      {rm.occupants && rm.occupants.length > 0 ? (
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
-                          {rm.occupants.map((occ, idx) => (
-                            <div
-                              key={occ.allocationId || idx}
-                              style={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '0.5rem',
-                                fontSize: '0.82rem',
-                                padding: '0.35rem 0.6rem',
-                                background: 'var(--bg-secondary)',
-                                borderRadius: 'var(--radius-sm)',
-                              }}
-                            >
-                              <span style={{ width: '18px', height: '18px', borderRadius: '50%', background: 'var(--primary-600)', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.68rem', fontWeight: 700 }}>
-                                {occ.bedNumber || idx + 1}
-                              </span>
-                              <span style={{ fontWeight: 600 }}>
-                                {occ.student?.firstName} {occ.student?.lastName}
-                              </span>
-                              <span style={{ fontSize: '0.72rem', color: 'var(--text-muted)', marginLeft: 'auto' }}>
-                                {occ.student?.registrationNumber}
-                              </span>
-                            </div>
-                          ))}
-                        </div>
-                      ) : (
-                        <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)', fontStyle: 'italic' }}>
-                          All beds currently vacant
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Amenities Tags */}
+                    {/* Amenities Badges */}
                     {rm.amenities && rm.amenities.length > 0 && (
-                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.35rem', marginBottom: '1rem' }}>
-                        {rm.amenities.slice(0, 3).map((am) => (
+                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.35rem', marginBottom: '1.1rem' }}>
+                        {rm.amenities.map((am) => (
                           <span
                             key={am}
                             style={{
                               fontSize: '0.72rem',
-                              padding: '0.15rem 0.45rem',
-                              borderRadius: '4px',
-                              background: 'var(--bg-secondary)',
-                              color: 'var(--text-secondary)',
+                              padding: '0.2rem 0.5rem',
+                              borderRadius: 'var(--radius-sm)',
+                              background: '#f1f5f9',
+                              color: '#475569',
+                              fontWeight: 600,
                             }}
                           >
-                            {am}
+                            ✓ {am}
                           </span>
                         ))}
-                        {rm.amenities.length > 3 && (
-                          <span style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>
-                            +{rm.amenities.length - 3} more
-                          </span>
-                        )}
                       </div>
                     )}
                   </div>
 
-                  {/* Actions Footer */}
+                  {/* Actions Bar */}
                   {isAdmin && (
-                    <div style={{ display: 'flex', gap: '0.5rem', borderTop: '1px solid var(--border-color)', paddingTop: '0.85rem' }}>
+                    <div style={{ display: 'flex', gap: '0.5rem', borderTop: '1px solid var(--border-color)', paddingTop: '0.9rem' }}>
                       {freeBeds > 0 && rm.status !== 'Maintenance' && (
                         <button
                           onClick={() => {
@@ -357,7 +341,7 @@ const Rooms = () => {
                             setIsAllocationModalOpen(true);
                           }}
                           className="btn btn-primary btn-sm"
-                          style={{ flex: 1, fontSize: '0.78rem' }}
+                          style={{ flex: 1, fontSize: '0.8rem' }}
                         >
                           <UserCheck size={14} />
                           Allot Bed
@@ -375,7 +359,7 @@ const Rooms = () => {
                       </button>
                       <button
                         onClick={() => handleDeleteRoom(rm)}
-                        className="btn btn-ghost btn-sm"
+                        className="btn btn-secondary btn-sm"
                         title="Delete Room"
                         style={{ color: 'var(--danger)' }}
                       >
@@ -396,7 +380,7 @@ const Rooms = () => {
                   <th>Room No</th>
                   <th>Block & Floor</th>
                   <th>Room Type</th>
-                  <th>Capacity</th>
+                  <th>Bed Capacity</th>
                   <th>Fee / Semester</th>
                   <th>Status</th>
                   <th style={{ textAlign: 'right' }}>Actions</th>
@@ -406,19 +390,19 @@ const Rooms = () => {
                 {rooms.map((rm) => (
                   <tr key={rm._id}>
                     <td>
-                      <span style={{ fontWeight: 800, fontSize: '1rem', color: 'var(--primary-600)' }}>
+                      <span style={{ fontWeight: 800, fontSize: '1.05rem', color: 'var(--primary-600)' }}>
                         {rm.roomNumber}
                       </span>
                     </td>
                     <td>
-                      <div>{rm.block}</div>
+                      <div style={{ fontWeight: 600 }}>{rm.block}</div>
                       <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Floor {rm.floor}</div>
                     </td>
                     <td>
                       <Badge status={rm.roomType} />
                     </td>
                     <td>
-                      <span style={{ fontWeight: 600 }}>{rm.occupiedBeds} / {rm.capacity}</span> Beds
+                      <span style={{ fontWeight: 700 }}>{rm.occupiedBeds} / {rm.capacity}</span> Beds
                     </td>
                     <td>
                       <strong>₹{Number(rm.feePerSemester).toLocaleString()}</strong>
@@ -427,7 +411,7 @@ const Rooms = () => {
                       <Badge status={rm.status} />
                     </td>
                     <td style={{ textAlign: 'right' }}>
-                      <div style={{ display: 'inline-flex', gap: '0.35rem' }}>
+                      <div style={{ display: 'inline-flex', gap: '0.4rem' }}>
                         {isAdmin && rm.capacity > rm.occupiedBeds && rm.status !== 'Maintenance' && (
                           <button
                             onClick={() => {
@@ -435,10 +419,10 @@ const Rooms = () => {
                               setIsAllocationModalOpen(true);
                             }}
                             title="Allot Bed"
-                            className="btn-icon btn-sm"
+                            className="btn btn-secondary btn-sm"
                             style={{ color: 'var(--success)' }}
                           >
-                            <UserCheck size={15} />
+                            <UserCheck size={14} /> Allot
                           </button>
                         )}
                         {isAdmin && (
@@ -449,17 +433,17 @@ const Rooms = () => {
                                 setIsRoomModalOpen(true);
                               }}
                               title="Edit Room"
-                              className="btn-icon btn-sm"
+                              className="btn btn-secondary btn-sm"
                             >
-                              <Edit2 size={15} />
+                              <Edit2 size={14} />
                             </button>
                             <button
                               onClick={() => handleDeleteRoom(rm)}
                               title="Delete Room"
-                              className="btn-icon btn-sm"
+                              className="btn btn-secondary btn-sm"
                               style={{ color: 'var(--danger)' }}
                             >
-                              <Trash2 size={15} />
+                              <Trash2 size={14} />
                             </button>
                           </>
                         )}
@@ -473,7 +457,6 @@ const Rooms = () => {
         )}
       </div>
 
-      {/* Room Modal */}
       <RoomFormModal
         isOpen={isRoomModalOpen}
         onClose={() => setIsRoomModalOpen(false)}
@@ -481,7 +464,6 @@ const Rooms = () => {
         onSuccess={fetchRooms}
       />
 
-      {/* Allocation Modal */}
       <AllocationFormModal
         isOpen={isAllocationModalOpen}
         onClose={() => {
