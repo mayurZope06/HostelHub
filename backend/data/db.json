@@ -1,0 +1,901 @@
+{
+  "users": [
+    {
+      "_id": "6ad1f7e7cc5336959962125c",
+      "name": "Hostel Chief Warden",
+      "email": "admin@hostel.com",
+      "password": "$2b$10$v2Sc4yiPhWluyclOpBZjoO2vPod9Xtr5/TSiDTM4FUikkEx6NYmz.",
+      "role": "admin",
+      "phone": "+91 98765 43210",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=250&q=80",
+      "createdAt": "2026-10-16T10:09:43.658Z",
+      "updatedAt": "2026-10-16T10:09:43.658Z"
+    },
+    {
+      "_id": "6ad1f7e790994b927ed1b8da",
+      "name": "Rahul Sharma",
+      "email": "rahul@student.com",
+      "password": "$2b$10$hH1yU3hWSvX0qAb8X8c/HukX3qB0AxOhV/sg1SvK57fVYRXRKKdKK",
+      "role": "student",
+      "phone": "+91 98111 22334",
+      "studentId": "6ad1f7e7964b224f3a7dbbe8",
+      "avatar": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=250&q=80",
+      "createdAt": "2026-10-16T10:09:43.784Z",
+      "updatedAt": "2026-10-16T10:09:43.784Z"
+    },
+    {
+      "_id": "6ad1f7e75465165ccc73da46",
+      "name": "Priya Patel",
+      "email": "priya@student.com",
+      "password": "$2b$10$sBxq6l23/egkKNWeMu5FVe6ayPPFSQr1ENEgTxbLVCX/7t1Fv16OK",
+      "role": "student",
+      "phone": "+91 98222 33445",
+      "studentId": "6ad1f7e7aa668ae760891f09",
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=250&q=80",
+      "createdAt": "2026-10-16T10:09:43.883Z",
+      "updatedAt": "2026-10-16T10:09:43.883Z"
+    },
+    {
+      "_id": "6ad1f7e756528cc0bafc1ab0",
+      "name": "Amit Verma",
+      "email": "amit@student.com",
+      "password": "$2b$10$joGow5ApniB9ei06v/wNiObKcKlEMncxgsiRd03J95/CJbzXLmW5a",
+      "role": "student",
+      "phone": "+91 98333 44556",
+      "studentId": "6ad1f7e757a881d4decec68a",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=250&q=80",
+      "createdAt": "2026-10-16T10:09:43.985Z",
+      "updatedAt": "2026-10-16T10:09:43.985Z"
+    },
+    {
+      "_id": "6ad1f7e81fb46f08beb483c0",
+      "name": "Ananya Sen",
+      "email": "ananya@student.com",
+      "password": "$2b$10$0MUvyNyiJDKi9ZMFWDhalOySkOyTt4sQ/KST9AlUE8ZavqFcSRvu2",
+      "role": "student",
+      "phone": "+91 98444 55667",
+      "studentId": "6ad1f7e746a3b5ab54ba3473",
+      "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=250&q=80",
+      "createdAt": "2026-10-16T10:09:44.083Z",
+      "updatedAt": "2026-10-16T10:09:44.083Z"
+    }
+  ],
+  "students": [
+    {
+      "_id": "6ad1f7e7964b224f3a7dbbe8",
+      "registrationNumber": "HST-2025-001",
+      "firstName": "Rahul",
+      "lastName": "Sharma",
+      "email": "rahul@student.com",
+      "phone": "+91 98111 22334",
+      "gender": "Male",
+      "dateOfBirth": {},
+      "bloodGroup": "B+",
+      "course": "B.Tech Computer Science",
+      "department": "Computer Science & Engineering",
+      "yearOfStudy": 3,
+      "address": {
+        "street": "42 Blossom Heights",
+        "city": "Jaipur",
+        "state": "Rajasthan",
+        "postalCode": "302001"
+      },
+      "emergencyContact": {
+        "name": "Manoj Sharma",
+        "relation": "Father",
+        "phone": "+91 98111 99887"
+      },
+      "guardian": {
+        "name": "Manoj Sharma",
+        "relation": "Father",
+        "phone": "+91 98111 99887",
+        "email": "manoj.sharma@example.com"
+      },
+      "avatar": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=250&q=80",
+      "createdAt": "2026-10-16T10:09:43.783Z",
+      "updatedAt": "2026-10-16T10:09:44.183Z",
+      "fullName": "Rahul Sharma",
+      "userAccount": "6ad1f7e790994b927ed1b8da",
+      "currentRoom": "6ad1f7e7ae3283136f97013b",
+      "allocationDate": "2025-08-01T00:00:00.000Z",
+      "status": "Active"
+    },
+    {
+      "_id": "6ad1f7e7aa668ae760891f09",
+      "registrationNumber": "HST-2025-002",
+      "firstName": "Priya",
+      "lastName": "Patel",
+      "email": "priya@student.com",
+      "phone": "+91 98222 33445",
+      "gender": "Female",
+      "dateOfBirth": {},
+      "bloodGroup": "O+",
+      "course": "B.Tech Information Technology",
+      "department": "Information Technology",
+      "yearOfStudy": 2,
+      "address": {
+        "street": "15 Sardar Nagar",
+        "city": "Ahmedabad",
+        "state": "Gujarat",
+        "postalCode": "380001"
+      },
+      "emergencyContact": {
+        "name": "Kirit Patel",
+        "relation": "Father",
+        "phone": "+91 98222 77889"
+      },
+      "guardian": {
+        "name": "Kirit Patel",
+        "relation": "Father",
+        "phone": "+91 98222 77889",
+        "email": "kirit.patel@example.com"
+      },
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=250&q=80",
+      "createdAt": "2026-10-16T10:09:43.783Z",
+      "updatedAt": "2026-10-16T10:09:44.184Z",
+      "fullName": "Priya Patel",
+      "userAccount": "6ad1f7e75465165ccc73da46",
+      "currentRoom": "6ad1f7e781f18cd0d931a8f0",
+      "allocationDate": "2025-08-01T00:00:00.000Z",
+      "status": "Active"
+    },
+    {
+      "_id": "6ad1f7e757a881d4decec68a",
+      "registrationNumber": "HST-2025-003",
+      "firstName": "Amit",
+      "lastName": "Verma",
+      "email": "amit@student.com",
+      "phone": "+91 98333 44556",
+      "gender": "Male",
+      "dateOfBirth": {},
+      "bloodGroup": "A+",
+      "course": "M.Tech Data Science",
+      "department": "Computer Science & Engineering",
+      "yearOfStudy": 1,
+      "address": {
+        "street": "78 Civil Lines",
+        "city": "Lucknow",
+        "state": "Uttar Pradesh",
+        "postalCode": "226001"
+      },
+      "emergencyContact": {
+        "name": "Sunita Verma",
+        "relation": "Mother",
+        "phone": "+91 98333 88990"
+      },
+      "guardian": {
+        "name": "Sunita Verma",
+        "relation": "Mother",
+        "phone": "+91 98333 88990",
+        "email": "sunita.verma@example.com"
+      },
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=250&q=80",
+      "createdAt": "2026-10-16T10:09:43.783Z",
+      "updatedAt": "2026-10-16T10:09:44.185Z",
+      "fullName": "Amit Verma",
+      "userAccount": "6ad1f7e756528cc0bafc1ab0",
+      "currentRoom": "6ad1f7e73382f006af915983",
+      "allocationDate": "2025-08-01T00:00:00.000Z",
+      "status": "Active"
+    },
+    {
+      "_id": "6ad1f7e746a3b5ab54ba3473",
+      "registrationNumber": "HST-2025-004",
+      "firstName": "Ananya",
+      "lastName": "Sen",
+      "email": "ananya@student.com",
+      "phone": "+91 98444 55667",
+      "gender": "Female",
+      "dateOfBirth": {},
+      "bloodGroup": "AB+",
+      "course": "B.Des Product Design",
+      "department": "School of Design",
+      "yearOfStudy": 3,
+      "address": {
+        "street": "12 Ballygunge Circular Rd",
+        "city": "Kolkata",
+        "state": "West Bengal",
+        "postalCode": "700019"
+      },
+      "emergencyContact": {
+        "name": "Subhash Sen",
+        "relation": "Father",
+        "phone": "+91 98444 11223"
+      },
+      "guardian": {
+        "name": "Subhash Sen",
+        "relation": "Father",
+        "phone": "+91 98444 11223",
+        "email": "subhash.sen@example.com"
+      },
+      "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=250&q=80",
+      "createdAt": "2026-10-16T10:09:43.783Z",
+      "updatedAt": "2026-10-16T10:09:44.186Z",
+      "fullName": "Ananya Sen",
+      "userAccount": "6ad1f7e81fb46f08beb483c0",
+      "currentRoom": "6ad1f7e7014a4b2a83538bd2",
+      "allocationDate": "2025-08-01T00:00:00.000Z",
+      "status": "Active"
+    },
+    {
+      "_id": "6ad1f7e74ad09adf58d89479",
+      "registrationNumber": "HST-2025-005",
+      "firstName": "Rohan",
+      "lastName": "Mehta",
+      "email": "rohan.mehta@student.com",
+      "phone": "+91 98555 66778",
+      "gender": "Male",
+      "dateOfBirth": {},
+      "bloodGroup": "O-",
+      "course": "B.Tech Mechanical Engg",
+      "department": "Mechanical Engineering",
+      "yearOfStudy": 2,
+      "address": {
+        "street": "92 Bandra West",
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "postalCode": "400050"
+      },
+      "emergencyContact": {
+        "name": "Vijay Mehta",
+        "relation": "Father",
+        "phone": "+91 98555 22334"
+      },
+      "guardian": {
+        "name": "Vijay Mehta",
+        "relation": "Father",
+        "phone": "+91 98555 22334",
+        "email": "vijay.mehta@example.com"
+      },
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=250&q=80",
+      "createdAt": "2026-10-16T10:09:43.783Z",
+      "updatedAt": "2026-10-16T10:09:44.185Z",
+      "currentRoom": "6ad1f7e73382f006af915983",
+      "allocationDate": "2025-08-01T00:00:00.000Z",
+      "status": "Active"
+    },
+    {
+      "_id": "6ad1f7e75fb25902038b0902",
+      "registrationNumber": "HST-2025-006",
+      "firstName": "Sneha",
+      "lastName": "Rao",
+      "email": "sneha.rao@student.com",
+      "phone": "+91 98666 77889",
+      "gender": "Female",
+      "dateOfBirth": {},
+      "bloodGroup": "B-",
+      "course": "MBA General",
+      "department": "School of Management",
+      "yearOfStudy": 1,
+      "address": {
+        "street": "34 Indiranagar 100ft Rd",
+        "city": "Bengaluru",
+        "state": "Karnataka",
+        "postalCode": "560038"
+      },
+      "emergencyContact": {
+        "name": "Gopal Rao",
+        "relation": "Father",
+        "phone": "+91 98666 33445"
+      },
+      "guardian": {
+        "name": "Gopal Rao",
+        "relation": "Father",
+        "phone": "+91 98666 33445",
+        "email": "gopal.rao@example.com"
+      },
+      "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=250&q=80",
+      "createdAt": "2026-10-16T10:09:43.783Z",
+      "updatedAt": "2026-10-16T10:09:44.187Z",
+      "currentRoom": "6ad1f7e787334d405ed15e19",
+      "allocationDate": "2025-08-01T00:00:00.000Z",
+      "status": "Active"
+    },
+    {
+      "_id": "6ad1f7e7afb624cc88b2741b",
+      "registrationNumber": "HST-2025-007",
+      "firstName": "Karthik",
+      "lastName": "Nair",
+      "email": "karthik.nair@student.com",
+      "phone": "+91 98777 88990",
+      "gender": "Male",
+      "dateOfBirth": {},
+      "bloodGroup": "A-",
+      "course": "B.Tech Electrical & Electronics",
+      "department": "Electrical Engineering",
+      "yearOfStudy": 2,
+      "address": {
+        "street": "51 Marine Drive",
+        "city": "Kochi",
+        "state": "Kerala",
+        "postalCode": "682031"
+      },
+      "emergencyContact": {
+        "name": "Radha Nair",
+        "relation": "Mother",
+        "phone": "+91 98777 44556"
+      },
+      "guardian": {
+        "name": "Radha Nair",
+        "relation": "Mother",
+        "phone": "+91 98777 44556",
+        "email": "radha.nair@example.com"
+      },
+      "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=250&q=80",
+      "createdAt": "2026-10-16T10:09:43.783Z",
+      "updatedAt": "2026-10-16T10:09:43.783Z"
+    },
+    {
+      "_id": "6ad1f7e75e1e301fec3e69ee",
+      "registrationNumber": "HST-2025-008",
+      "firstName": "Tanvi",
+      "lastName": "Kulkarni",
+      "email": "tanvi.k@student.com",
+      "phone": "+91 98888 99001",
+      "gender": "Female",
+      "dateOfBirth": {},
+      "bloodGroup": "O+",
+      "course": "B.Tech AI & Machine Learning",
+      "department": "Computer Science & Engineering",
+      "yearOfStudy": 1,
+      "address": {
+        "street": "88 Shivaji Nagar",
+        "city": "Pune",
+        "state": "Maharashtra",
+        "postalCode": "411005"
+      },
+      "emergencyContact": {
+        "name": "Anil Kulkarni",
+        "relation": "Father",
+        "phone": "+91 98888 55667"
+      },
+      "guardian": {
+        "name": "Anil Kulkarni",
+        "relation": "Father",
+        "phone": "+91 98888 55667",
+        "email": "anil.k@example.com"
+      },
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=250&q=80",
+      "createdAt": "2026-10-16T10:09:43.783Z",
+      "updatedAt": "2026-10-16T10:09:43.783Z"
+    }
+  ],
+  "rooms": [
+    {
+      "_id": "6ad1f7e7ae3283136f97013b",
+      "roomNumber": "A-101",
+      "block": "Block A",
+      "floor": 1,
+      "roomType": "Single",
+      "capacity": 1,
+      "occupiedBeds": 1,
+      "feePerSemester": 38000,
+      "amenities": [
+        "AC",
+        "High-speed Wi-Fi",
+        "Attached Bathroom",
+        "Balcony",
+        "Study Table"
+      ],
+      "description": "Deluxe single occupancy room with private balcony and air conditioning.",
+      "createdAt": "2026-10-16T10:09:43.650Z",
+      "updatedAt": "2026-10-16T10:09:44.188Z",
+      "status": "Occupied"
+    },
+    {
+      "_id": "6ad1f7e73382f006af915983",
+      "roomNumber": "A-102",
+      "block": "Block A",
+      "floor": 1,
+      "roomType": "Double",
+      "capacity": 2,
+      "occupiedBeds": 2,
+      "feePerSemester": 28000,
+      "amenities": [
+        "High-speed Wi-Fi",
+        "Attached Bathroom",
+        "Study Table",
+        "Ceiling Fan"
+      ],
+      "description": "Standard double sharing room with ample storage and garden view.",
+      "createdAt": "2026-10-16T10:09:43.650Z",
+      "updatedAt": "2026-10-16T10:09:44.188Z",
+      "status": "Occupied"
+    },
+    {
+      "_id": "6ad1f7e7d4ec07a3f889ce34",
+      "roomNumber": "A-201",
+      "block": "Block A",
+      "floor": 2,
+      "roomType": "Double",
+      "capacity": 2,
+      "occupiedBeds": 0,
+      "feePerSemester": 28000,
+      "amenities": [
+        "AC",
+        "High-speed Wi-Fi",
+        "Attached Bathroom",
+        "Study Table"
+      ],
+      "description": "Second-floor AC double room with panoramic campus view.",
+      "createdAt": "2026-10-16T10:09:43.650Z",
+      "updatedAt": "2026-10-16T10:09:43.650Z"
+    },
+    {
+      "_id": "6ad1f7e75e528449a4e8f582",
+      "roomNumber": "A-202",
+      "block": "Block A",
+      "floor": 2,
+      "roomType": "Triple",
+      "capacity": 3,
+      "occupiedBeds": 0,
+      "feePerSemester": 22000,
+      "amenities": [
+        "High-speed Wi-Fi",
+        "Attached Bathroom",
+        "Study Table",
+        "Ceiling Fan"
+      ],
+      "description": "Spacious triple sharing room ideal for freshers.",
+      "createdAt": "2026-10-16T10:09:43.650Z",
+      "updatedAt": "2026-10-16T10:09:43.650Z"
+    },
+    {
+      "_id": "6ad1f7e781f18cd0d931a8f0",
+      "roomNumber": "B-101",
+      "block": "Block B",
+      "floor": 1,
+      "roomType": "Single",
+      "capacity": 1,
+      "occupiedBeds": 1,
+      "feePerSemester": 36000,
+      "amenities": [
+        "AC",
+        "High-speed Wi-Fi",
+        "Attached Bathroom",
+        "Study Table"
+      ],
+      "description": "Quiet single room near the central reading lounge.",
+      "createdAt": "2026-10-16T10:09:43.650Z",
+      "updatedAt": "2026-10-16T10:09:44.189Z",
+      "status": "Occupied"
+    },
+    {
+      "_id": "6ad1f7e7014a4b2a83538bd2",
+      "roomNumber": "B-102",
+      "block": "Block B",
+      "floor": 1,
+      "roomType": "Double",
+      "capacity": 2,
+      "occupiedBeds": 1,
+      "feePerSemester": 26000,
+      "amenities": [
+        "High-speed Wi-Fi",
+        "Attached Bathroom",
+        "Study Table"
+      ],
+      "description": "Well-ventilated twin sharing room with attached modern bath.",
+      "createdAt": "2026-10-16T10:09:43.650Z",
+      "updatedAt": "2026-10-16T10:09:44.191Z",
+      "status": "Partially Occupied"
+    },
+    {
+      "_id": "6ad1f7e773573a2ae81b5f2b",
+      "roomNumber": "B-201",
+      "block": "Block B",
+      "floor": 2,
+      "roomType": "Triple",
+      "capacity": 3,
+      "occupiedBeds": 0,
+      "feePerSemester": 20000,
+      "amenities": [
+        "High-speed Wi-Fi",
+        "Attached Bathroom",
+        "Individual Wardrobes"
+      ],
+      "description": "Comfortable triple bed accommodation with large windows.",
+      "createdAt": "2026-10-16T10:09:43.650Z",
+      "updatedAt": "2026-10-16T10:09:43.650Z"
+    },
+    {
+      "_id": "6ad1f7e77fe1b1fb9cf0b6bb",
+      "roomNumber": "B-202",
+      "block": "Block B",
+      "floor": 2,
+      "roomType": "Dormitory",
+      "capacity": 4,
+      "occupiedBeds": 0,
+      "feePerSemester": 16000,
+      "amenities": [
+        "High-speed Wi-Fi",
+        "Shared Bathrooms",
+        "Lockers",
+        "Ceiling Fans"
+      ],
+      "description": "Economic 4-bed shared dormitory with secure individual lockers.",
+      "createdAt": "2026-10-16T10:09:43.650Z",
+      "updatedAt": "2026-10-16T10:09:43.650Z"
+    },
+    {
+      "_id": "6ad1f7e787334d405ed15e19",
+      "roomNumber": "C-101",
+      "block": "Block C",
+      "floor": 1,
+      "roomType": "Double",
+      "capacity": 2,
+      "occupiedBeds": 1,
+      "feePerSemester": 27000,
+      "amenities": [
+        "AC",
+        "High-speed Wi-Fi",
+        "Attached Bathroom",
+        "Balcony"
+      ],
+      "description": "Modern executive double room with scenic courtyard outlook.",
+      "createdAt": "2026-10-16T10:09:43.650Z",
+      "updatedAt": "2026-10-16T10:09:44.191Z",
+      "status": "Partially Occupied"
+    },
+    {
+      "_id": "6ad1f7e7d5d4b225abc01499",
+      "roomNumber": "C-102",
+      "block": "Block C",
+      "floor": 1,
+      "roomType": "Single",
+      "capacity": 1,
+      "occupiedBeds": 0,
+      "feePerSemester": 35000,
+      "amenities": [
+        "High-speed Wi-Fi",
+        "Attached Bathroom",
+        "Study Table"
+      ],
+      "description": "Private single room with ergonomic study desk.",
+      "createdAt": "2026-10-16T10:09:43.650Z",
+      "updatedAt": "2026-10-16T10:09:43.650Z"
+    },
+    {
+      "_id": "6ad1f7e76770a6bd35b59743",
+      "roomNumber": "C-201",
+      "block": "Block C",
+      "floor": 2,
+      "roomType": "Double",
+      "capacity": 2,
+      "occupiedBeds": 0,
+      "feePerSemester": 25000,
+      "amenities": [
+        "High-speed Wi-Fi",
+        "Attached Bathroom"
+      ],
+      "status": "Maintenance",
+      "description": "Under periodic electrical rewiring and interior painting.",
+      "createdAt": "2026-10-16T10:09:43.650Z",
+      "updatedAt": "2026-10-16T10:09:43.650Z"
+    },
+    {
+      "_id": "6ad1f7e75ab2b7152a227999",
+      "roomNumber": "C-202",
+      "block": "Block C",
+      "floor": 2,
+      "roomType": "Triple",
+      "capacity": 3,
+      "occupiedBeds": 0,
+      "feePerSemester": 21000,
+      "amenities": [
+        "High-speed Wi-Fi",
+        "Attached Bathroom",
+        "Study Table"
+      ],
+      "description": "Corner triple room with abundant natural sunlight.",
+      "createdAt": "2026-10-16T10:09:43.650Z",
+      "updatedAt": "2026-10-16T10:09:43.650Z"
+    }
+  ],
+  "allocations": [
+    {
+      "_id": "6ad1f7e8d0fcfcd8e33806df",
+      "student": "6ad1f7e7964b224f3a7dbbe8",
+      "room": "6ad1f7e7ae3283136f97013b",
+      "bedNumber": 1,
+      "academicYear": "2025-2026",
+      "startDate": {},
+      "monthlyFee": 38000,
+      "allocatedBy": "6ad1f7e7cc5336959962125c",
+      "status": "Active",
+      "remarks": "Allocated during first semester enrollment",
+      "createdAt": "2026-10-16T10:09:44.182Z",
+      "updatedAt": "2026-10-16T10:09:44.182Z"
+    },
+    {
+      "_id": "6ad1f7e8f969e58dcde68cce",
+      "student": "6ad1f7e7aa668ae760891f09",
+      "room": "6ad1f7e781f18cd0d931a8f0",
+      "bedNumber": 1,
+      "academicYear": "2025-2026",
+      "startDate": {},
+      "monthlyFee": 36000,
+      "allocatedBy": "6ad1f7e7cc5336959962125c",
+      "status": "Active",
+      "remarks": "Single room allotted on academic merit",
+      "createdAt": "2026-10-16T10:09:44.182Z",
+      "updatedAt": "2026-10-16T10:09:44.182Z"
+    },
+    {
+      "_id": "6ad1f7e8842acf5bbf6cac5e",
+      "student": "6ad1f7e757a881d4decec68a",
+      "room": "6ad1f7e73382f006af915983",
+      "bedNumber": 1,
+      "academicYear": "2025-2026",
+      "startDate": {},
+      "monthlyFee": 28000,
+      "allocatedBy": "6ad1f7e7cc5336959962125c",
+      "status": "Active",
+      "remarks": "Bed 1 in twin sharing",
+      "createdAt": "2026-10-16T10:09:44.182Z",
+      "updatedAt": "2026-10-16T10:09:44.182Z"
+    },
+    {
+      "_id": "6ad1f7e8ec528bcd025de3a8",
+      "student": "6ad1f7e74ad09adf58d89479",
+      "room": "6ad1f7e73382f006af915983",
+      "bedNumber": 2,
+      "academicYear": "2025-2026",
+      "startDate": {},
+      "monthlyFee": 28000,
+      "allocatedBy": "6ad1f7e7cc5336959962125c",
+      "status": "Active",
+      "remarks": "Bed 2 in twin sharing",
+      "createdAt": "2026-10-16T10:09:44.182Z",
+      "updatedAt": "2026-10-16T10:09:44.182Z"
+    },
+    {
+      "_id": "6ad1f7e84384e3e5b093cdb6",
+      "student": "6ad1f7e746a3b5ab54ba3473",
+      "room": "6ad1f7e7014a4b2a83538bd2",
+      "bedNumber": 1,
+      "academicYear": "2025-2026",
+      "startDate": {},
+      "monthlyFee": 26000,
+      "allocatedBy": "6ad1f7e7cc5336959962125c",
+      "status": "Active",
+      "remarks": "Block B double occupancy",
+      "createdAt": "2026-10-16T10:09:44.182Z",
+      "updatedAt": "2026-10-16T10:09:44.182Z"
+    },
+    {
+      "_id": "6ad1f7e8d94d849d3f8f303b",
+      "student": "6ad1f7e75fb25902038b0902",
+      "room": "6ad1f7e787334d405ed15e19",
+      "bedNumber": 1,
+      "academicYear": "2025-2026",
+      "startDate": {},
+      "monthlyFee": 27000,
+      "allocatedBy": "6ad1f7e7cc5336959962125c",
+      "status": "Active",
+      "remarks": "Courtyard view room",
+      "createdAt": "2026-10-16T10:09:44.182Z",
+      "updatedAt": "2026-10-16T10:09:44.182Z"
+    }
+  ],
+  "fees": [
+    {
+      "_id": "6ad1f7e8a73215791e74bae2",
+      "invoiceNumber": "INV-2025-1001",
+      "student": "6ad1f7e7964b224f3a7dbbe8",
+      "room": "6ad1f7e7ae3283136f97013b",
+      "title": "Fall Semester 2025 Hostel & AC Rent",
+      "feeType": "Hostel Rent",
+      "amount": 38000,
+      "paidAmount": 38000,
+      "dueDate": {},
+      "paidDate": {},
+      "status": "Paid",
+      "paymentMethod": "UPI / QR",
+      "transactionReference": "UPI-992837461823",
+      "remarks": "Paid in full via PhonePe UPI",
+      "createdAt": "2026-10-16T10:09:44.192Z",
+      "updatedAt": "2026-10-16T10:09:44.192Z"
+    },
+    {
+      "_id": "6ad1f7e8a00b054a6e3c51d5",
+      "invoiceNumber": "INV-2025-1002",
+      "student": "6ad1f7e7aa668ae760891f09",
+      "room": "6ad1f7e781f18cd0d931a8f0",
+      "title": "Fall Semester 2025 Hostel Single Room Rent",
+      "feeType": "Hostel Rent",
+      "amount": 36000,
+      "paidAmount": 36000,
+      "dueDate": {},
+      "paidDate": {},
+      "status": "Paid",
+      "paymentMethod": "Net Banking",
+      "transactionReference": "HDFC-882736451",
+      "remarks": "Net banking transaction processed successfully",
+      "createdAt": "2026-10-16T10:09:44.192Z",
+      "updatedAt": "2026-10-16T10:09:44.192Z"
+    },
+    {
+      "_id": "6ad1f7e8bf4486386563aaeb",
+      "invoiceNumber": "INV-2025-1003",
+      "student": "6ad1f7e757a881d4decec68a",
+      "room": "6ad1f7e73382f006af915983",
+      "title": "Fall Semester 2025 Double Room Rent",
+      "feeType": "Hostel Rent",
+      "amount": 28000,
+      "paidAmount": 14000,
+      "dueDate": {},
+      "paidDate": {},
+      "status": "Partial",
+      "paymentMethod": "Credit/Debit Card",
+      "transactionReference": "CARD-TXN-49281",
+      "remarks": "First installment of 50% paid; remaining due next month",
+      "createdAt": "2026-10-16T10:09:44.192Z",
+      "updatedAt": "2026-10-16T10:09:44.192Z"
+    },
+    {
+      "_id": "6ad1f7e8bf3a319692d3b34d",
+      "invoiceNumber": "INV-2025-1004",
+      "student": "6ad1f7e746a3b5ab54ba3473",
+      "room": "6ad1f7e7014a4b2a83538bd2",
+      "title": "Fall Semester 2025 Hostel Room Rent",
+      "feeType": "Hostel Rent",
+      "amount": 26000,
+      "paidAmount": 0,
+      "dueDate": {},
+      "status": "Overdue",
+      "remarks": "Fee payment overdue notice sent to guardian email",
+      "createdAt": "2026-10-16T10:09:44.192Z",
+      "updatedAt": "2026-10-16T10:09:44.192Z"
+    },
+    {
+      "_id": "6ad1f7e88b631b8262251391",
+      "invoiceNumber": "INV-2025-1005",
+      "student": "6ad1f7e74ad09adf58d89479",
+      "room": "6ad1f7e73382f006af915983",
+      "title": "Fall Semester 2025 Double Room Rent",
+      "feeType": "Hostel Rent",
+      "amount": 28000,
+      "paidAmount": 0,
+      "dueDate": {},
+      "status": "Pending",
+      "remarks": "Payment invoice issued for semester",
+      "createdAt": "2026-10-16T10:09:44.192Z",
+      "updatedAt": "2026-10-16T10:09:44.192Z"
+    },
+    {
+      "_id": "6ad1f7e82610fabbf5240b2d",
+      "invoiceNumber": "INV-2025-1006",
+      "student": "6ad1f7e7964b224f3a7dbbe8",
+      "room": "6ad1f7e7ae3283136f97013b",
+      "title": "Annual Hostel Mess & Dining Subscription",
+      "feeType": "Mess Fee",
+      "amount": 24000,
+      "paidAmount": 24000,
+      "dueDate": {},
+      "paidDate": {},
+      "status": "Paid",
+      "paymentMethod": "UPI / QR",
+      "transactionReference": "UPI-44910293847",
+      "remarks": "Special meal plan opted",
+      "createdAt": "2026-10-16T10:09:44.192Z",
+      "updatedAt": "2026-10-16T10:09:44.192Z"
+    },
+    {
+      "_id": "6ad1f7e8b2cc34a60092d31e",
+      "invoiceNumber": "INV-2025-1007",
+      "student": "6ad1f7e75fb25902038b0902",
+      "room": "6ad1f7e787334d405ed15e19",
+      "title": "Hostel Security & Caution Deposit",
+      "feeType": "Security Deposit",
+      "amount": 10000,
+      "paidAmount": 10000,
+      "dueDate": {},
+      "paidDate": {},
+      "status": "Paid",
+      "paymentMethod": "Cash",
+      "transactionReference": "CASH-REC-1092",
+      "remarks": "Refundable caution deposit deposited with hostel bursar",
+      "createdAt": "2026-10-16T10:09:44.192Z",
+      "updatedAt": "2026-10-16T10:09:44.192Z"
+    }
+  ],
+  "complaints": [
+    {
+      "_id": "6ad1f7e87de2a1b2367694b4",
+      "student": "6ad1f7e7964b224f3a7dbbe8",
+      "title": "Ceiling Fan Making Clicking Sound in Room A-101",
+      "category": "Electrical",
+      "roomNumber": "A-101",
+      "description": "The ceiling fan regulator vibrates and emits a clicking noise when running on speed 3 or higher.",
+      "priority": "Medium",
+      "status": "Resolved",
+      "resolutionNotes": "Electrician checked the bearing and replaced faulty capacitor. Working quietly now.",
+      "resolvedAt": {},
+      "createdAt": "2026-10-16T10:09:44.194Z",
+      "updatedAt": "2026-10-16T10:09:44.194Z"
+    },
+    {
+      "_id": "6ad1f7e8fbff1dbd33fb32e2",
+      "student": "6ad1f7e757a881d4decec68a",
+      "title": "Attached Bathroom Washbasin Tap Leakage",
+      "category": "Plumbing",
+      "roomNumber": "A-102",
+      "description": "Cold water tap continues dripping even when tightly shut, causing water wastage and pooling.",
+      "priority": "High",
+      "status": "In Progress",
+      "resolutionNotes": "Plumbing contractor notified; scheduled for gasket replacement this afternoon.",
+      "createdAt": "2026-10-16T10:09:44.194Z",
+      "updatedAt": "2026-10-16T10:09:44.194Z"
+    },
+    {
+      "_id": "6ad1f7e828f0886b55e3ebbe",
+      "student": "6ad1f7e7aa668ae760891f09",
+      "title": "High-speed Wi-Fi Signal Weak on Block B First Floor",
+      "category": "Internet / Wi-Fi",
+      "roomNumber": "B-101",
+      "description": "Frequent Wi-Fi packet drops and low signal strength inside room B-101 during evening study hours.",
+      "priority": "Medium",
+      "status": "Pending",
+      "createdAt": "2026-10-16T10:09:44.194Z",
+      "updatedAt": "2026-10-16T10:09:44.194Z"
+    },
+    {
+      "_id": "6ad1f7e85e3f9324c0f8d2d7",
+      "student": "6ad1f7e746a3b5ab54ba3473",
+      "title": "Study Desk Drawer Lock Jammed",
+      "category": "Furniture",
+      "roomNumber": "B-102",
+      "description": "The bottom wooden drawer lock is stuck and cannot be opened with the key.",
+      "priority": "Low",
+      "status": "Pending",
+      "createdAt": "2026-10-16T10:09:44.194Z",
+      "updatedAt": "2026-10-16T10:09:44.194Z"
+    }
+  ],
+  "notices": [
+    {
+      "_id": "6ad1f7e85b59622295c2225e",
+      "title": "Hostel Mess Revised Seasonal Menu & Dining Hours",
+      "content": "Dear Residents, The hostel mess committee has introduced the updated autumn menu starting next Monday. Dinner will be served between 7:30 PM and 9:45 PM. Vegetarian and vegan options have been expanded.",
+      "category": "Mess & Dining",
+      "isPinned": true,
+      "targetAudience": "All Students",
+      "postedBy": "Chief Warden & Mess Council",
+      "createdAt": "2026-10-16T10:09:44.195Z",
+      "updatedAt": "2026-10-16T10:09:44.195Z"
+    },
+    {
+      "_id": "6ad1f7e8681cc9944c26516d",
+      "title": "Campus High-Speed Fiber Backbone Maintenance",
+      "content": "Please note that IT network infrastructure maintenance will take place this Saturday from 2:00 AM to 5:00 AM. Internet access across Blocks A, B, and C will be temporarily interrupted during this window.",
+      "category": "Maintenance",
+      "isPinned": true,
+      "targetAudience": "All Students",
+      "postedBy": "Campus IT Services",
+      "createdAt": "2026-10-16T10:09:44.195Z",
+      "updatedAt": "2026-10-16T10:09:44.195Z"
+    },
+    {
+      "_id": "6ad1f7e829aec543e1e77f8e",
+      "title": "Hostel Premier League (HPL) Badminton & Chess Championship",
+      "content": "Registrations are now open for the Annual Inter-Block Hostel Championship. Interested students can sign up at the recreation hall notice board before Thursday 6:00 PM.",
+      "category": "Events",
+      "isPinned": false,
+      "targetAudience": "All Students",
+      "postedBy": "Sports Committee",
+      "createdAt": "2026-10-16T10:09:44.195Z",
+      "updatedAt": "2026-10-16T10:09:44.195Z"
+    },
+    {
+      "_id": "6ad1f7e8fc3e8128cbb19f7e",
+      "title": "Hostel Security & Gate Curfew Reminders",
+      "content": "All residents are reminded that biometric hostel gate check-in closes strictly at 10:30 PM on weekdays. Prior late-entry permission from the resident warden is mandatory.",
+      "category": "Rules & Regulations",
+      "isPinned": false,
+      "targetAudience": "All Students",
+      "postedBy": "Hostel Security Office",
+      "createdAt": "2026-10-16T10:09:44.195Z",
+      "updatedAt": "2026-10-16T10:09:44.195Z"
+    }
+  ]
+}

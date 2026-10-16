@@ -1,0 +1,25 @@
+{
+  "name": "hostel-management-system",
+  "version": "1.0.0",
+  "description": "Full-Stack Hostel Management System using MERN Stack with Modern UI, JWT Auth, Room Allotment, and Invoicing",
+  "main": "run-all.js",
+  "type": "module",
+  "scripts": {
+    "start": "node run-all.js",
+    "dev": "node run-all.js",
+    "server": "npm --prefix backend start",
+    "client": "npm --prefix frontend run dev",
+    "seed": "npm --prefix backend run seed",
+    "build": "npm --prefix frontend run build"
+  },
+  "keywords": [
+    "hostel-management",
+    "mern-stack",
+    "react",
+    "nodejs",
+    "express",
+    "mongodb"
+  ],
+  "author": "",
+  "license": "ISC"
+}
