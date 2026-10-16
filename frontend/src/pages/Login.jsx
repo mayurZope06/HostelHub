@@ -3,7 +3,8 @@ import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useTheme } from '../context/ThemeContext';
 import { useToast } from '../context/ToastContext';
-import { Building2, Lock, Mail, ArrowRight, ShieldCheck, User, Sparkles, Sun, Moon } from 'lucide-react';
+import ThemeToggle from '../components/common/ThemeToggle';
+import { Building2, Lock, Mail, ArrowRight, ShieldCheck, User, Sparkles } from 'lucide-react';
 
 const Login = () => {
   const [email, setEmail] = useState('');
