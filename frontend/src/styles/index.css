@@ -85,6 +85,112 @@
 }
 
 /* ==========================================================================
+   DARK THEME HIGH-CONTRAST LUXURY OVERRIDES
+   ========================================================================== */
+[data-theme='dark'] {
+  --bg-primary: #090e17;
+  --bg-secondary: #0f172a;
+  --bg-surface: #111a2e;
+  --bg-surface-hover: #16223b;
+  --bg-glass: rgba(17, 26, 46, 0.85);
+  --bg-sidebar: #0b1220;
+  --bg-input: #152038;
+
+  --border-color: rgba(51, 65, 85, 0.65);
+  --border-subtle: rgba(51, 65, 85, 0.4);
+  --border-hover: rgba(99, 102, 241, 0.45);
+  --border-focus: #60a5fa;
+
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-light: #64748b;
+  --text-inverse: #090e17;
+
+  --primary-50: rgba(37, 99, 235, 0.18);
+  --primary-100: rgba(37, 99, 235, 0.3);
+  --primary-200: rgba(37, 99, 235, 0.45);
+
+  --success-bg: rgba(5, 150, 105, 0.18);
+  --success-border: rgba(5, 150, 105, 0.35);
+
+  --warning-bg: rgba(217, 119, 6, 0.18);
+  --warning-border: rgba(217, 119, 6, 0.35);
+
+  --danger-bg: rgba(220, 38, 38, 0.18);
+  --danger-border: rgba(220, 38, 38, 0.35);
+
+  --info-bg: rgba(2, 132, 199, 0.18);
+  --info-border: rgba(2, 132, 199, 0.35);
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 10px 25px -3px rgba(0, 0, 0, 0.6);
+  --shadow-xl: 0 20px 35px -5px rgba(0, 0, 0, 0.7);
+  --shadow-card: 0 2px 14px rgba(0, 0, 0, 0.35);
+  --shadow-card-hover: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme='dark'] body {
+  background-color: var(--bg-primary);
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.14) 0px, transparent 60%),
+    radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.09) 0px, transparent 60%),
+    radial-gradient(at 50% 100%, rgba(99, 102, 241, 0.12) 0px, transparent 65%);
+}
+
+[data-theme='dark'] .sidebar-brand .brand-text-title {
+  color: #f8fafc;
+}
+
+[data-theme='dark'] .sidebar-footer {
+  background: #090e17;
+}
+
+[data-theme='dark'] .custom-table th {
+  background: #0d1527;
+  color: #94a3b8;
+}
+
+[data-theme='dark'] .custom-table tbody tr:hover {
+  background: #15223a;
+}
+
+[data-theme='dark'] .modal-content {
+  background: #111a2e;
+}
+
+[data-theme='dark'] .modal-header {
+  background: #0e1628;
+}
+
+[data-theme='dark'] .modal-footer {
+  background: #0a101d;
+}
+
+[data-theme='dark'] .table-toolbar {
+  background: #111a2e;
+}
+
+[data-theme='dark'] .bed-slot.vacant {
+  background: #111a2e;
+  border-color: #334155;
+  color: #94a3b8;
+}
+
+[data-theme='dark'] .badge-neutral {
+  background: #1e293b;
+  color: #cbd5e1;
+  border-color: #334155;
+}
+
+[data-theme='dark'] .header-session-badge {
+  background: #111a2e;
+  border-color: #334155;
+}
+
+/* ==========================================================================
    RESET & FOUNDATION
    ========================================================================== */
 *, *::before, *::after {
