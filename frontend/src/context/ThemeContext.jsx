@@ -5,7 +5,7 @@ const ThemeContext = createContext();
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(() => {
     const saved = localStorage.getItem('hostel_theme');
-    return saved === 'dark' ? 'light' : 'light'; // Always default to modern light theme
+    return saved === 'dark' ? 'dark' : 'light'; // Supports both, defaults to light
   });
 
   useEffect(() => {

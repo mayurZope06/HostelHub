@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, Bell, ShieldCheck, User, Sparkles, Building2, Search, ArrowRight } from 'lucide-react';
+import { Menu, Bell, ShieldCheck, User, Sparkles, Building2, Search, ArrowRight, Sun, Moon } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
+import { useTheme } from '../../context/ThemeContext';
 import { useNavigate } from 'react-router-dom';
 
 const Header = ({ onToggleMobile, pageTitle }) => {
   const { user, isAdmin } = useAuth();
+  const { theme, toggleTheme } = useTheme();
   const navigate = useNavigate();
   const [timeStr, setTimeStr] = useState('');
 
@@ -73,6 +75,24 @@ const Header = ({ onToggleMobile, pageTitle }) => {
           />
           Hostel Hub Active
         </div>
+
+        {/* Theme Switcher Toggle */}
+        <button
+          onClick={toggleTheme}
+          className="btn-icon"
+          title={theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+          id="theme-toggle-btn"
+          style={{
+            position: 'relative',
+            overflow: 'hidden',
+          }}
+        >
+          {theme === 'dark' ? (
+            <Sun size={18} color="#f59e0b" style={{ animation: 'fadeIn 0.2s ease-out' }} />
+          ) : (
+            <Moon size={18} color="#4f46e5" style={{ animation: 'fadeIn 0.2s ease-out' }} />
+          )}
+        </button>
 
         {/* Notice Board Link */}
         <button
