@@ -321,7 +321,11 @@
       },
       "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=250&q=80",
       "createdAt": "2026-10-16T10:09:43.783Z",
-      "updatedAt": "2026-10-16T10:09:43.783Z"
+      "updatedAt": "2026-10-16T11:25:22.088Z",
+      "fullName": "Tanvi Kulkarni",
+      "currentRoom": "6ad1f7e7d4ec07a3f889ce34",
+      "allocationDate": "2026-10-16",
+      "status": "Active"
     }
   ],
   "rooms": [
@@ -374,7 +378,7 @@
       "floor": 2,
       "roomType": "Double",
       "capacity": 2,
-      "occupiedBeds": 0,
+      "occupiedBeds": 1,
       "feePerSemester": 28000,
       "amenities": [
         "AC",
@@ -384,7 +388,8 @@
       ],
       "description": "Second-floor AC double room with panoramic campus view.",
       "createdAt": "2026-10-16T10:09:43.650Z",
-      "updatedAt": "2026-10-16T10:09:43.650Z"
+      "updatedAt": "2026-10-16T11:25:22.087Z",
+      "availableBeds": 2
     },
     {
       "_id": "6ad1f7e75e528449a4e8f582",
@@ -655,6 +660,20 @@
       "status": "Active",
       "createdAt": "2026-10-16T11:05:45.833Z",
       "updatedAt": "2026-10-16T11:05:45.833Z"
+    },
+    {
+      "_id": "6ad209a2d317286ab52d12e2",
+      "student": "6ad1f7e75e1e301fec3e69ee",
+      "room": "6ad1f7e7d4ec07a3f889ce34",
+      "bedNumber": 1,
+      "academicYear": "2025-2026",
+      "startDate": "2026-10-16",
+      "remarks": "Regular academic semester allotment",
+      "monthlyFee": 28000,
+      "allocatedBy": "6ad1f7e7cc5336959962125c",
+      "status": "Active",
+      "createdAt": "2026-10-16T11:25:22.086Z",
+      "updatedAt": "2026-10-16T11:25:22.086Z"
     }
   ],
   "fees": [
@@ -796,6 +815,20 @@
       "transactionReference": "TXN-49413149",
       "paidDate": {},
       "remarks": "Payment cleared"
+    },
+    {
+      "_id": "6ad209a212001579e0fbcc86",
+      "invoiceNumber": "INV-922089",
+      "student": "6ad1f7e75e1e301fec3e69ee",
+      "room": "6ad1f7e7d4ec07a3f889ce34",
+      "title": "Room A-201 Hostel Fee (2025-2026)",
+      "feeType": "Hostel Rent",
+      "amount": 28000,
+      "paidAmount": 0,
+      "dueDate": {},
+      "status": "Pending",
+      "createdAt": "2026-10-16T11:25:22.089Z",
+      "updatedAt": "2026-10-16T11:25:22.089Z"
     }
   ],
   "complaints": [
