@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { useTheme } from '../context/ThemeContext';
 import { useToast } from '../context/ToastContext';
-import { Building2, Lock, Mail, ArrowRight, ShieldCheck, User, Sparkles } from 'lucide-react';
+import { Building2, Lock, Mail, ArrowRight, ShieldCheck, User, Sparkles, Sun, Moon } from 'lucide-react';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -10,6 +11,7 @@ const Login = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const { login } = useAuth();
+  const { theme, toggleTheme } = useTheme();
   const { addToast } = useToast();
   const navigate = useNavigate();
 
@@ -45,9 +47,27 @@ const Login = () => {
         alignItems: 'center',
         justifyContent: 'center',
         padding: '2rem 1.5rem',
-        background: 'radial-gradient(ellipse at 50% 0%, rgba(37, 99, 235, 0.08) 0%, transparent 60%), #f8fafc',
+        background: 'radial-gradient(ellipse at 50% 0%, rgba(37, 99, 235, 0.08) 0%, transparent 60%), var(--bg-primary)',
+        position: 'relative',
       }}
     >
+      {/* Floating Theme Switcher on Login Page */}
+      <button
+        onClick={toggleTheme}
+        className="btn-icon"
+        title={theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+        style={{
+          position: 'absolute',
+          top: '1.5rem',
+          right: '1.5rem',
+          width: '42px',
+          height: '42px',
+          borderRadius: 'var(--radius-full)',
+        }}
+      >
+        {theme === 'dark' ? <Sun size={20} color="#f59e0b" /> : <Moon size={20} color="#4f46e5" />}
+      </button>
+
       <div
         className="card"
         style={{
@@ -56,8 +76,8 @@ const Login = () => {
           padding: '2.75rem',
           borderRadius: 'var(--radius-xl)',
           boxShadow: 'var(--shadow-xl)',
-          background: '#ffffff',
-          border: '1px solid #e2e8f0',
+          background: 'var(--bg-surface)',
+          border: '1px solid var(--border-color)',
         }}
       >
         {/* Brand Icon & Heading */}
@@ -87,11 +107,11 @@ const Login = () => {
         {/* Demo Fast-Login Helpers */}
         <div
           style={{
-            background: '#f8fafc',
+            background: 'var(--bg-secondary)',
             padding: '1.1rem',
             borderRadius: 'var(--radius-md)',
             marginBottom: '1.75rem',
-            border: '1px solid #e2e8f0',
+            border: '1px solid var(--border-color)',
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', color: 'var(--primary-600)', marginBottom: '0.65rem' }}>

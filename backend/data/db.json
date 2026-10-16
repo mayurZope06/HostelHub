@@ -46,6 +46,17 @@
       "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=250&q=80",
       "createdAt": "2026-10-16T10:09:44.083Z",
       "updatedAt": "2026-10-16T10:09:44.083Z"
+    },
+    {
+      "_id": "6ad2077d74a8508c67aa60fd",
+      "name": "Mayur Zope",
+      "email": "mayur.zope@nmiet.edu.in",
+      "password": "$2b$10$feSzA6Cj/N9o5P0p1XQpaeyGZDE1QgbtfKYUwcVjVlz64/y.PUMqe",
+      "role": "student",
+      "phone": "909567841",
+      "studentId": null,
+      "createdAt": "2026-10-16T11:16:13.157Z",
+      "updatedAt": "2026-10-16T11:16:13.157Z"
     }
   ],
   "students": [
@@ -775,11 +786,16 @@
       "title": "Room A-101 Hostel Fee (2025-2026)",
       "feeType": "Hostel Rent",
       "amount": 38000,
-      "paidAmount": 0,
+      "paidAmount": 38000,
       "dueDate": {},
       "status": "Pending",
       "createdAt": "2026-10-16T11:05:45.851Z",
-      "updatedAt": "2026-10-16T11:05:45.851Z"
+      "updatedAt": "2026-10-16T11:17:02.245Z",
+      "remainingBalance": 38000,
+      "paymentMethod": "Net Banking",
+      "transactionReference": "TXN-49413149",
+      "paidDate": {},
+      "remarks": "Payment cleared"
     }
   ],
   "complaints": [

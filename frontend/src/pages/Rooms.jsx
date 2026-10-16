@@ -319,8 +319,8 @@ const Rooms = () => {
                               fontSize: '0.72rem',
                               padding: '0.2rem 0.5rem',
                               borderRadius: 'var(--radius-sm)',
-                              background: '#f1f5f9',
-                              color: '#475569',
+                              background: 'var(--bg-secondary)',
+                              color: 'var(--text-secondary)',
                               fontWeight: 600,
                             }}
                           >
