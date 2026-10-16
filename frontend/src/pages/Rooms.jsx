@@ -103,7 +103,7 @@ const Rooms = () => {
 
         <div style={{ display: 'flex', gap: '0.65rem', alignItems: 'center' }}>
           {/* View Toggle */}
-          <div style={{ display: 'flex', background: '#f1f5f9', borderRadius: 'var(--radius-md)', padding: '0.2rem' }}>
+          <div style={{ display: 'flex', background: 'var(--bg-secondary)', border: '1px solid var(--border-color)', borderRadius: 'var(--radius-md)', padding: '0.2rem' }}>
             <button
               onClick={() => setViewMode('grid')}
               className={`btn-icon btn-sm ${viewMode === 'grid' ? 'btn-primary' : 'btn-ghost'}`}

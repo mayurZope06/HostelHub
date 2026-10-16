@@ -480,7 +480,7 @@ button {
 }
 
 .nav-link:hover {
-  background: #f1f5f9;
+  background: var(--bg-secondary);
   color: var(--primary-600);
   transform: translateX(2px);
 }
@@ -506,7 +506,7 @@ button {
 .sidebar-footer {
   padding: 1rem 1.2rem;
   border-top: 1px solid var(--border-subtle);
-  background: #fafafa;
+  background: var(--bg-surface);
 }
 
 .user-mini-card {
@@ -742,7 +742,7 @@ button {
   box-shadow: var(--shadow-xs);
 }
 .btn-secondary:hover {
-  background: #f8fafc;
+  background: var(--bg-surface-hover);
   border-color: var(--border-hover);
   color: var(--primary-600);
 }
@@ -769,7 +769,7 @@ button {
   color: var(--text-secondary);
 }
 .btn-ghost:hover {
-  background: #f1f5f9;
+  background: var(--bg-secondary);
   color: var(--text-primary);
 }
 
@@ -788,7 +788,7 @@ button {
   transition: all var(--transition-fast);
 }
 .btn-icon:hover {
-  background: #f8fafc;
+  background: var(--bg-surface-hover);
   color: var(--primary-600);
   border-color: var(--primary-500);
   transform: translateY(-1px);
@@ -840,8 +840,8 @@ button {
 }
 
 .badge-neutral {
-  background: #f1f5f9;
-  color: #475569;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
   border: 1px solid var(--border-color);
 }
 
@@ -871,7 +871,7 @@ button {
   flex-wrap: wrap;
   gap: 1rem;
   border-bottom: 1px solid var(--border-color);
-  background: #ffffff;
+  background: var(--bg-surface);
 }
 
 .search-box {
@@ -882,7 +882,7 @@ button {
 .search-box input {
   width: 100%;
   padding: 0.65rem 1rem 0.65rem 2.6rem;
-  background: #ffffff;
+  background: var(--bg-input);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   color: var(--text-primary);
@@ -920,8 +920,8 @@ button {
 
 .custom-table th {
   padding: 0.95rem 1.4rem;
-  background: #f8fafc;
-  color: #64748b;
+  background: var(--bg-secondary);
+  color: var(--text-muted);
   font-weight: 700;
   font-size: 0.77rem;
   text-transform: uppercase;
@@ -941,7 +941,7 @@ button {
 }
 
 .custom-table tbody tr:hover {
-  background: #f8fafc;
+  background: var(--bg-surface-hover);
 }
 
 .custom-table tr:last-child td {
@@ -1013,7 +1013,7 @@ button {
 }
 
 .modal-content {
-  background: #ffffff;
+  background: var(--bg-surface);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-xl);
@@ -1036,7 +1036,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #fcfcfd;
+  background: var(--bg-secondary);
 }
 
 .modal-body {
@@ -1052,7 +1052,7 @@ button {
   align-items: center;
   justify-content: flex-end;
   gap: 0.85rem;
-  background: #f8fafc;
+  background: var(--bg-secondary);
 }
 
 /* ==========================================================================
@@ -1075,7 +1075,8 @@ button {
   max-width: 440px;
   padding: 0.95rem 1.3rem;
   border-radius: var(--radius-md);
-  background: #ffffff;
+  background: var(--bg-surface);
+  color: var(--text-primary);
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-xl);
   display: flex;
@@ -1095,7 +1096,7 @@ button {
 .progress-bar-container {
   width: 100%;
   height: 8px;
-  background: #e2e8f0;
+  background: var(--border-color);
   border-radius: var(--radius-full);
   overflow: hidden;
 }
@@ -1153,15 +1154,15 @@ button {
 }
 
 .bed-slot.occupied {
-  background: #ecfdf5;
-  border-color: #a7f3d0;
-  color: #065f46;
+  background: var(--success-bg);
+  border-color: var(--success-border);
+  color: var(--success);
 }
 
 .bed-slot.vacant {
-  background: #f8fafc;
-  border-color: #cbd5e1;
-  color: #64748b;
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-muted);
   border-style: dashed;
 }
 
