@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useToast } from '../context/ToastContext';
+import ThemeToggle from '../components/common/ThemeToggle';
 import { Building2, User, Mail, Lock, Phone, ArrowRight } from 'lucide-react';
 
 const Register = () => {
@@ -56,8 +57,12 @@ const Register = () => {
         justifyContent: 'center',
         padding: '2rem 1.5rem',
         background: 'radial-gradient(ellipse at 50% 20%, rgba(99, 102, 241, 0.15), transparent 70%), var(--bg-primary)',
+        position: 'relative',
       }}
     >
+      {/* Floating Theme Switcher on Register Page */}
+      <ThemeToggle variant="floating" />
+
       <div
         className="card"
         style={{
